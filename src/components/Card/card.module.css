@@ -1,0 +1,28 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 24%;
+  background-color: #5d2a00;
+  height: fit-content;
+  color: #fff;
+  font-weight: 300;
+  border-radius: 4px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card_content {
+  padding: 0px 0px 12px 20px;
+}
+
+.card_content h2 {
+  letter-spacing: 1px;
+}
+
+.card_content p {
+  margin-bottom: 6px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}

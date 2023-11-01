@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  background-color: #212121;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.card_main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px;
+  gap: 14px;
+  min-height: 100vh;
+  height: 100%;
+}

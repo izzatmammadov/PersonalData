@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import styles from "./app.module.css";
+import { Form } from "./components/Form/Form";
+import { Card } from "./components/Card/Card";
 
 function App() {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formDataArray, setFormDataArray] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`${styles.container}`}>
+      <Form
+        onSubmit={(data) => {
+          setFormSubmitted(true);
+          setFormDataArray([...formDataArray, data]);
+        }}
+      />
+      <div className={`${styles.card_main}`}>
+        {formDataArray.map((data, index) => (
+          <Card key={index} data={data} />
+        ))}
+      </div>
     </div>
   );
 }
